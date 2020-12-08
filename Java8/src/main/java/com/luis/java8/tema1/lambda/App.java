@@ -1,6 +1,8 @@
 package com.luis.java8.tema1.lambda;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -15,6 +17,13 @@ public class App
 		lista.add("Luis");
 		lista.add("Eduardo");
 		lista.add("Luis Eduardo");
+		
+		Collections.sort(lista, new Comparator<String>() {
+			@Override
+			public int compare(String ol, String o2) {
+				return ol.compareTo(o2);
+			}
+		});
 		
 	}
 	
