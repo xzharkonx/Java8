@@ -116,9 +116,9 @@ public class Scopes {
 	public static void main(String[] args) {
 		Scopes app = new Scopes();
 		// Utilizando variables locales no pueden cambiar su valor, solo se utilizadas.
-		//System.out.println(app.probarLocalVariable());
+		// System.out.println(app.probarLocalVariable());
 		// Utilizando variables globales (estáticas y no estáticas) pueden cambiar su valor,
-		// o ser asignadas
+		// o ser asignadas.
 		System.out.println(app.probarAtributosStaticVariables());
 		
 		// Este comportamiento funcionará igual para los Objetos anónimos.
