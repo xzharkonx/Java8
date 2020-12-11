@@ -11,3 +11,4 @@
 ## Tema 7. ForEach, RemoveIf, Sort.
 ## Tema 8. Stream.
 ## Tema 9. Optional.
+## Tema 10. Stream Paraelo.
