@@ -1,4 +1,4 @@
-package com.luis.java8.tema115.RxJava;
+package com.luis.java8.tema15.RxJava;
 
 import java.util.ArrayList;
 import java.util.List;
