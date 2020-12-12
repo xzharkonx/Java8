@@ -13,7 +13,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<!-- 		Se agregaron estas propiedades para utilizar Java 8 -->
+		<!-- Se agregaron estas propiedades para utilizar Java 8 -->
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -25,5 +25,15 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Programación reactiva con RxJAVA -->
+
+		<dependency>
+			<groupId>io.reactivex</groupId>
+			<artifactId>rxjava</artifactId>
+			<version>1.2.6</version>
+		</dependency>
+
+
 	</dependencies>
 </project>
