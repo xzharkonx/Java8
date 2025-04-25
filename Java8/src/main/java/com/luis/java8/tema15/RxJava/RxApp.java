@@ -2,9 +2,10 @@ package com.luis.java8.tema15.RxJava;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
 import rx.Observable;
 import rx.functions.Action1;
+*/
 
 // Java Rx
 
@@ -51,8 +52,8 @@ public class RxApp {
 		// la lógica de filtrado y mostramos los números que coincidieron bajo ese criterío.
 		// Y esto se va a hacer tanto para la lista1 como para la lista2 de manera asincrona
 		
-		Observable<Integer> obs1 = Observable.from(lista1);
-		Observable<Integer> obs2 = Observable.from(lista2);
+		///Observable<Integer> obs1 = Observable.from(lista1);
+		///Observable<Integer> obs2 = Observable.from(lista2);
 		
 		// Ahora nos apoyamos del método merge() lo que nos va a permitir unir 2 observables
 		// para obtener un único resultado.
@@ -87,11 +88,11 @@ public class RxApp {
 		
 		// Que pasaría si tenemos una lógica más compleja de x==1, podríamos hacer lo siguiente.
 		
-		Observable.merge(obs1, obs2).filter(x->x==1).subscribe(x -> {
-			if (x == 1) {
-				System.out.println(x);
-			}
-		});
+		///Observable.merge(obs1, obs2).filter(x->x==1).subscribe(x -> {
+		///if (x == 1) {
+		///System.out.println(x);
+		///}
+		///});
 	}
 
 	public static void main(String[] args) {
@@ -112,20 +113,20 @@ public class RxApp {
 		
 		// Entonces lo que hacemos en está linea de código es crear el Observable, es decir, mi Objeto
 		// que tiene que ser observado de una lista.
-		Observable<String> obs = Observable.from(lista);
+		///Observable<String> obs = Observable.from(lista);
 		// ¿Y que vamos a hacer?
 		// Vamos a suscribir a un Observador, nos apoyamos de interfaces que ya vienen por defecto en RxJAVA,
 		// como el Observable es de tipo String también tenemos que definir algo String aquí en Action1
 		// Importamos lo que nos pide.
 		// Como las interfaces no se pueden instanciar tenemos que implementar sus métodos.
-		obs.subscribe(new Action1<String>() {
+		///obs.subscribe(new Action1<String>() {
 
-			@Override
-			public void call(String elemento) {
+		///@Override
+		///public void call(String elemento) {
 				// Aquí va a resibir cada elemento el contenido que tiene este observable y lo único
 				// que vamos a hacer es una impresión.
 				
-				System.out.println(elemento);
+		///System.out.println(elemento);
 				
 				// Vemos que sale el contenido de la lista, ¿Pero de que nos sirve esto?
 				// RxJAVA básicamente te permite hacer el manejo de procesamiento asíncrono de una
@@ -140,9 +141,9 @@ public class RxApp {
 				
 				
 				
-			}
+				///}
 			
-		});
+				///});
 
 		// Para ver el procesamiento de un proceso asincrono vamos a ver el siguiente ejercicio.
 		
