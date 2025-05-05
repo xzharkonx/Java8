@@ -17,6 +17,10 @@ public interface PersonaA {
 	// Y como es un método por defecto necesitamos implementarlo.
 	default public void hablar() {
 		System.out.println("Saludos Coders - PersonaA");
+		
+		// Invocando un método con su implementación dentro del default. 
+		PersonaA p = ()-> System.out.println("Hola mundo");
+		p.caminar();
 	}
 	
 }

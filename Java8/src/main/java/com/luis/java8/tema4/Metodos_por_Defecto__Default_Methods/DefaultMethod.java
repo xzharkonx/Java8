@@ -48,9 +48,9 @@ public class DefaultMethod implements PersonaA, PersonaB{
 	// en este caso hablar, colocandolo de la siguiente manera.
 	@Override
 	public void hablar() {
-		// PersonaA.super.hablar();
+		 PersonaA.super.hablar();
 		// PersonaB.super.hablar();
-		System.out.println("Método default sobreescrito");
+		//System.out.println("Método default sobreescrito");
 	}
 	
 	// Cabe mencionar que puede cambiarse a que el método retorne algo, ya 

@@ -21,7 +21,7 @@ public class MeRefApp {
 
 	
 	public void referenciarMetodoInstanciaObjetoArbitrario() {
-		
+		System.out.println("Método Referido de Instancia de Objeto Arbitrario");
 		String[] nombres = {"Mito", "Code", "Jaime"};
 		
 		// 1ra manera para implementar esta lógica de comparar para ordenar un Array. JDK 1.7. ----------
@@ -68,10 +68,11 @@ public class MeRefApp {
 	
 	public void referenciarMetodoInstanciaObjetoParticular() {
 		System.out.println("Método Referido Instancia de un Objeto en particular");
+		System.out.println(this.getClass().getSimpleName());
 	}
 	
 	public void referenciarConstructor() {
-		
+		System.out.println("Método Referido por Constructor");
 		// 
 		// 1.- Llamada a esta intefaz funcional pero esto es muy excesivo, Clase anónima. -------------
 		/* IPersona iper = new IPersona() {
