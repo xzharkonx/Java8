@@ -30,7 +30,7 @@ public class Mapeos {
 	
 	public void mapeoLista() {
 		
-		List<Producto> lp = new ArrayList<>();
+		lp = new ArrayList<>();
 		lp.add(new Producto("Monster", 35.0));
 		lp.add(new Producto("Sabritas", 45.0));
 		lp.add(new Producto("Cocholate Hersey's", 42.0));
@@ -38,6 +38,8 @@ public class Mapeos {
 		lp.add(new Producto("Papel Higienico", 55.0));
 		Double precioObjetivo = 50.00d;
 		Double descuento = 0.8d;
+		
+		// Guarda los valores en otra instancia.
 		List<Producto> lp2 = lp.stream().filter(p -> (p.getPrecio() < precioObjetivo))
 				.map(e-> {
 					e.setPrecio(e.getPrecio()*0.8);
@@ -46,6 +48,29 @@ public class Mapeos {
 				.collect(Collectors.toList());
 		
 		lp2.stream().forEach(System.out::println);
+		
+	}
+	
+	public void mapeoLista2() {
+		
+		lp = new ArrayList<>();
+		lp.add(new Producto("Monster", 35.0));
+		lp.add(new Producto("Sabritas", 45.0));
+		lp.add(new Producto("Cocholate Hersey's", 42.0));
+		lp.add(new Producto("Salsa Magge", 60.0));
+		lp.add(new Producto("Papel Higienico", 55.0));
+		Double precioObjetivo = 50.00d;
+		Double descuento = 0.8d;
+		
+		// Sustituye los valores de su propia instancia.
+		lp = lp.stream().filter(p -> (p.getPrecio() < precioObjetivo))
+				.map(e-> {
+					e.setPrecio(e.getPrecio()*0.8);
+					return e;
+				})
+				.collect(Collectors.toList());
+		
+		lp.stream().forEach(System.out::println);
 		
 	}
 	
