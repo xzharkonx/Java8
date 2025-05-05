@@ -70,7 +70,7 @@ public class App {
 	
 	// JDK 1.8, solo declaramos las anotaciones.
 	@Lenguaje("Java")
-	@Lenguaje("Python")
+	@Lenguaje(value="Python",nombreUsuario="Ing Luis Garcia")
 	public interface LenguajeProgramacion{
 		
 	}
@@ -128,6 +128,7 @@ public class App {
 		
 		for (Lenguaje elemento : len.value()) {
 			System.out.println(elemento.value());
+			System.out.println(elemento.nombreUsuario());
 		}
 
 		// Esto es básicamente el uso de la api reflection.
