@@ -12,6 +12,7 @@ public class Mapeos {
 	
 	List<Producto> lp;
 	Map<Integer, String> map;
+	static Map<String, String> mapTest;
 	
 	public void poblar() {
 		lp = new ArrayList<>();
@@ -90,15 +91,70 @@ public class Mapeos {
 		mapaRecolectado.forEach((k,v) -> System.out.println("Llave: " + k + " Valor: " + v));
 	}
 	
+	static void mapeoTest() {
+		
+		mapTest = new HashMap<>();
+		mapTest.put("1", "Luis");
+		mapTest.put("2", "Eduardo");
+		mapTest.put("3", "Luis Eduardo");
+		mapTest.put("canal", "123");
+		mapTest.put("token", "abc");
+		
+		mapTest.putIfAbsent("4", "cuatro");
+		mapTest.putIfAbsent("4", "cinco");
+	}
+	
 
 	public static void main(String[] args) {
+		
+		Map<String, String> mapeo = new HashMap();
+		mapeo.put("id", "000");
 		
 		Mapeos mapeos = new Mapeos();
 		mapeos.poblar();
 		mapeos.mapeoLista();
 		mapeos.mapeoMapa();
 		
+		System.out.println("--------------");
+		
+		mapeoTest();
+		mapTest.putIfAbsent("canal", "12345");
+		mapTest.putIfAbsent("5", "5");
+		mapTest.putIfAbsent("1", "51");
 
+		mapTest.forEach((k,v) -> System.out.println("Llave: " + k + " Valor: " + v));
+		
+		System.out.println("-----Llenando Mapa---------");
+		
+		// Se extren unos valores de un mapa y se extraen en otro mapa.
+		
+		mapTest.forEach((k,v) -> {
+			if(k.equalsIgnoreCase("canal")) {
+				mapeo.putIfAbsent(k, v);
+			} else if(k.equalsIgnoreCase("token")) {
+				mapeo.putIfAbsent(k, v);
+			}
+		});
+		
+		mapeo.forEach((k,v) -> System.out.println("Llave: " + k + " Valor: " + v));
+		
+		
+		System.out.println("-----Validar contenido de Mapa---------");
+		
+		Map<String, String> mapeoVacio = new HashMap();
+		// mapeoVacio.put("1", "Hola mundo");
+		mapeoVacio.put("2", "Hola mundo");
+		if(mapeoVacio!=null && mapeoVacio.size()>0) {
+			System.out.println("No es nulo");
+			System.out.println("Y tiene contenido");
+			mapeoVacio.entrySet().stream().forEach(System.out::println);
+		} else {
+			System.out.println("Es nulo o no tiene contenido.");
+		}
+		
+		System.out.println("Tamaño del mapa: "+mapeoVacio.size());
+		
+		
 	}
 
 }
